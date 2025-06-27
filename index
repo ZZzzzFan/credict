@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学信档案 - 高等学籍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background-color: #fff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .header h1 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .header .link {
+      font-size: 14px;
+      color: #007fff;
+      text-decoration: none;
+    }
+
+    .banner {
+      background-color: #38bdf8;
+      color: #fff;
+      padding: 16px;
+      margin: 12px;
+      border-radius: 8px;
+    }
+
+    .banner p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .card {
+      background-color: #fff;
+      margin: 0 12px 12px;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .info-card {
+      background-color: #4ade80;
+      border-radius: 8px;
+      padding: 16px;
+      color: #fff;
+      margin: 0 12px 12px;
+    }
+
+    .info-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .info-header .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 4px;
+      margin-right: 12px;
+    }
+
+    .info-header .photo-placeholder {
+      width: 60px;
+      height: 60px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      color: #e5e7eb;
+    }
+
+    .info-header .name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .info-header .gender-birth {
+      font-size: 14px;
+      color: #e5e7eb;
+    }
+
+    .school-info {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .major-info {
+      font-size: 14px;
+      color: #e5e7eb;
+      margin-bottom: 12px;
+    }
+
+    .detail-list {
+      background-color: #fff;
+      margin: 0 12px 12px;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .detail-list .item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .detail-list .item .label {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .detail-list .item .value {
+      color: #111827;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      background-color: #4ade80;
+      color: #fff;
+      padding: 12px;
+      margin: 0 12px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部标题区域 -->
+  <div class="header">
+    <h1>学信档案</h1>
+    <a href="my.chsi.com.cn" class="link">my.chsi.com.cn</a>
+  </div>
+  <!-- 考证现状 banner -->
+  <div class="banner">
+    <p>考证现状</p>
+    <p>参与考证需求调研，分享备考经验，共筑高效考证指南</p>
+  </div>
+  <!-- 查看图像采集码卡片 -->
+  <div class="card">
+    <div class="card-title">查看图像采集码</div>
+  </div>
+  <!-- 个人信息卡片 -->
+  <div class="info-card">
+    <div class="info-header">
+      <img src="1.jpg" alt="录取照片" class="avatar"> <!-- 替换为实际录取照片路径 -->
+      <div class="photo-placeholder">学历照片</div>
+      <div>
+        <div class="name">张颜承</div>
+        <div class="gender-birth">男 2006年09月25日</div>
+      </div>
+    </div>
+    <div class="school-info">清华大学</div>
+    <div class="major-info">土木工程 | 普通全日制 <span style="float: right;">本科</span></div>
+  </div>
+  <!-- 详细信息列表 -->
+  <div class="detail-list">
+    <div class="item">
+      <span class="label">民族</span>
+      <span class="value">汉族</span>
+    </div>
+    <div class="item">
+      <span class="label">证件号码</span>
+      <span class="value">4320483200609251314</span>
+    </div>
+    <div class="item">
+      <span class="label">学制</span>
+      <span class="value">4年</span>
+    </div>
+    <div class="item">
+      <span class="label">学历类别</span>
+      <span class="value">普通高等教育</span>
+    </div>
+    <div class="item">
+      <span class="label">分院</span>
+      <span class="value">土木水利学院</span>
+    </div>
+    <div class="item">
+      <span class="label">系所</span>
+      <span class="value">土木水利学院</span>
+    </div>
+    <div class="item">
+      <span class="label">班级</span>
+      <span class="value">土木24</span>
+    </div>
+    <div class="item">
+      <span class="label">学号</span>
+      <span class="value">012924129</span>
+    </div>
+    <div class="item">
+      <span class="label">入学日期</span>
+      <span class="value">2024年09月01日</span>
+    </div>
+    <div class="item">
+      <span class="label">学籍状态</span>
+      <span class="value">在籍（注册学籍）</span>
+    </div>
+    <div class="item">
+      <span class="label">预计毕业日期</span>
+      <span class="value">2028年06月30日</span>
+    </div>
+  </div>
+  <!-- 申请验证报告按钮 -->
+  <a href="#" class="btn">申请验证报告</a>
+</body>
+
+</html>
