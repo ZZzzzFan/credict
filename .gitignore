@@ -1,0 +1,9 @@
+# Parcel 构建输出
+/dist
+.cache
+
+# 依赖
+/node_modules
+
+# 环境变量
+.env    
