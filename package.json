@@ -1,0 +1,17 @@
+{
+  "name": "xuexin-static-website",
+  "version": "1.0.0",
+  "description": "学信档案静态网站",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "browserslist": [
+    "last 1 Chrome version",
+    "last 1 Firefox version",
+    "last 1 Safari version"
+  ]
+}    
