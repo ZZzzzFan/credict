@@ -65,91 +65,151 @@
       margin-bottom: 8px;
     }
 
+    /* 个人信息卡片 */
     .info-card {
       background-color: #4db885;
       border-radius: 8px;
       padding: 16px;
       color: #fff;
       margin: 0 12px 12px;
+      display: flex;
+      flex-direction: column;
     }
 
     .info-header {
       display: flex;
       align-items: center;
       margin-bottom: 12px;
+      gap: 12px;
     }
 
-    .info-header .avatar {
+    /* 头像和文字放一个块 */
+    .photo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 60px;
+      position: relative;
+    }
+
+    /* 头像样式 */
+    .avatar {
       width: 60px;
       height: 60px;
       border-radius: 4px;
-      margin-right: 12px;
-    }
-
-    .info-header .photo-placeholder {
-      width: 60px;
-      height: 60px;
+      object-fit: cover;
+      margin-bottom: 4px;
       border: 1px solid #fff;
-      border-radius: 4px;
+    }
+
+    /* 文字下方说明 */
+    .photo-label {
+      font-size: 12px;
+      color: #e5e7eb;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    /* 学历照片右上角的问号图标 */
+    .photo-placeholder-icon {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #ef4444;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 12px;
-      color: #e5e7eb;
+      font-size: 10px;
+      border: 1px solid #fff;
+      z-index: 1;
     }
 
-    .info-header .name {
+    /* 右侧姓名、性别生日等信息 */
+    .info-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .name {
       font-size: 16px;
-      font-weight: 600;
+      font-weight: normal; /* 取消张颜承加粗 */
       margin-bottom: 4px;
+      color: #fff;
     }
 
-    .info-header .gender-birth {
+    .gender-birth {
       font-size: 14px;
-      color: #e5e7eb;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    /* 学校和专业等信息 */
+    .school-major {
+      display: flex;
+      flex-direction: column;
     }
 
     .school-info {
-      font-size: 17px;
-      font-weight: 600;
+      font-size: 23px;
+      font-weight: normal; /* 取消清华大学加粗 */
       margin-bottom: 8px;
+      color: #fff;
     }
 
     .major-info {
       font-size: 14px;
-      color: #e5e7eb;
-      margin-bottom: 12px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .major-info .major-detail {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: normal;
+    }
+
+    .major-info .degree {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #fff;
     }
 
     .detail-list {
-  /*background-color: #fff;*/
-  border-radius: 12px;
-  padding: 20px 0;
-  max-width: 360px;
-  margin: 0 auto;
-}
+      border-radius: 12px;
+      padding: 20px 0;
+      max-width: 360px;
+      margin: 0 auto;
+    }
 
-.detail-list .item {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
-  font-size: 14px;
-}
+    .detail-list .item {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
 
-.detail-list .label {
-  color: #6b7280;
-  text-align: right;
-  min-width: 80px;
-  margin-right: 12px;
-}
+    .detail-list .label {
+      color: #6b7280;
+      text-align: right;
+      min-width: 80px;
+      margin-right: 12px;
+    }
 
-.detail-list .value {
-  color: #111827;
-  text-align: left;
-  min-width: 180px;
-}
-
-
+    .detail-list .value {
+      color: #111827;
+      text-align: left;
+      min-width: 180px;
+    }
 
     .btn {
       display: block;
@@ -170,7 +230,7 @@
   <!-- 头部标题区域 -->
   <div class="header">
     <h1>学信档案</h1>
-    <a href="my.chsi.com.cn" class="link">my.chsi.com.cn</a>
+    <a href="https://my.chsi.com.cn" class="link" target="_blank" rel="noopener noreferrer">my.chsi.com.cn</a>
   </div>
   <!-- 考证现状 banner -->
   <div class="banner">
@@ -184,15 +244,32 @@
   <!-- 个人信息卡片 -->
   <div class="info-card">
     <div class="info-header">
-      <img src="1.jpg" alt="录取照片" class="avatar"> <!-- 替换为实际录取照片路径 -->
-      <div class="photo-placeholder">学历照片</div>
-      <div>
-        <div class="name">张颜承</div>
+      <div class="photo-block">
+        <img src="1.jpg" alt="录取照片" class="avatar">
+        <div class="photo-label">录取照片</div>
+      </div>
+      <div class="photo-block">
+        <img src="2.jpg" alt="学历照片" class="avatar">
+        <div class="photo-label">学历照片</div>
+        <!-- 添加红色问号图标 -->
+        <div class="photo-placeholder-icon">?</div>
+      </div>
+      <div class="info-text">
+        <div class="name">张颜承</div> <!-- 已取消加粗 -->
         <div class="gender-birth">男 2006年09月25日</div>
       </div>
     </div>
-    <div class="school-info">清华大学</div>
-    <div class="major-info">土木工程 | 普通全日制 <span style="float: right;">本科</span></div>
+    <div class="school-major">
+      <div class="school-info">清华大学</div> <!-- 已取消加粗 -->
+      <div class="major-info">
+        <div class="major-detail">
+          <span>土木水利学院</span>
+          <span>|</span>
+          <span>普通全日制</span>
+        </div>
+        <span class="degree">本科</span>
+      </div>
+    </div>
   </div>
   <!-- 详细信息列表 -->
   <div class="detail-list">
